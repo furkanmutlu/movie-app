@@ -1,0 +1,17 @@
+# Netlify build configuration.
+# Pins the Node version because Vite requires a modern runtime
+# (Vite 8 needs Node >= 20.19 / 22.12). Without this, Netlify used an
+# older default Node and every Vite build failed with exit code 2.
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# SPA fallback so client-side routes (e.g. /:movieId) resolve to index.html.
+# (Also present in public/_redirects; kept here for clarity.)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
