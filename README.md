@@ -22,13 +22,22 @@
     ```sh
     https://github.com/furkanmutlu/movie-app.git
     ```
-2. **Running**
-  In the project directory, you can run:
-  
-  ### `npm start`
-  
-  Runs the app in the development mode.\
-  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. **Set up your environment**
+
+    ```sh
+    cp .env.example .env
+    # then add your TMDB API key to .env
+    ```
+
+3. **Install & run** (built with [Vite](https://vitejs.dev/))
+
+    ```sh
+    npm install
+    npm run dev      # start the dev server (http://localhost:5173)
+    npm run build    # production build -> build/
+    npm run preview  # preview the production build locally
+    npm test         # run the Vitest test suite
+    ```
 
     
 ## 💫 Deploy
