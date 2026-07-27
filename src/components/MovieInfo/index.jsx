@@ -13,7 +13,7 @@ import NoImage from "../../images/no_image.jpg";
 import { Wrapper, Content, Text } from "./MovieInfo.styles";
 
 const MovieInfo = ({ movie }) => (
-    <Wrapper backdrop={movie.backdrop_path}>
+    <Wrapper $backdrop={movie.backdrop_path}>
         <Content>
             <Thumb
                 image={
